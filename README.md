@@ -1,2 +1,2 @@
 # AI-DIWALI-PROJECT
-My first interactive Diwali greeting website
+My interactive Diwali greeting website
