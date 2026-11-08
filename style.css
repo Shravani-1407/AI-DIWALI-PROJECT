@@ -1,0 +1,352 @@
+
+/* 1. Main webpage design */
+body {
+    background: linear-gradient(135deg, #080d27, #241044, #080d27);
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding-top: 100px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 2. Main Diwali heading */
+h1 {
+    color: #ffd700;
+    font-size: 45px;
+    text-shadow: 0 0 10px gold, 0 0 25px orange;
+}
+
+/* 3. Subheading */
+h2 {
+    color: #55dfff;
+    font-size: 28px;
+}
+
+/* 4. Description */
+p {
+    color: #eeeeee;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* 5. Celebrate button */
+button {
+    background: linear-gradient(90deg, #ff9800, #ffd700);
+    color: #160d27;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* 6. Button hover effect */
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px gold;
+}
+
+/* Diya container */
+.diya-container {
+    margin: 60px auto;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+/* Diya lamp */
+.diya {
+    width: 120px;
+    height: 55px;
+    background: linear-gradient(
+        to bottom,
+        #ffd700,
+        #ff8c00
+    );
+
+    border-radius: 10px 10px 60px 60px;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    box-shadow: 0 0 25px orange;
+}
+
+/* Oil inside the diya */
+.oil {
+    width: 80px;
+    height: 12px;
+    background: #5c2600;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+/* Diya flame */
+.flame {
+    width: 25px;
+    height: 45px;
+    background: linear-gradient(
+        to top,
+        orange,
+        yellow,
+        white
+    );
+
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    top: 25px;
+    left: 62px;
+
+    box-shadow: 0 0 25px orange;
+    animation: flicker 1s infinite alternate;
+}
+
+/* Flame animation */
+@keyframes flicker {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* Diya container */
+.diya-container {
+    margin: 60px auto;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+/* Diya lamp */
+.diya {
+    width: 120px;
+    height: 55px;
+    background: linear-gradient(to bottom, #ffd700, #ff8c00);
+    border-radius: 10px 10px 60px 60px;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    box-shadow: 0 0 25px orange;
+}
+
+/* Oil inside diya */
+.oil {
+    width: 80px;
+    height: 12px;
+    background: #5c2600;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+/* Diya flame */
+.flame {
+    width: 25px;
+    height: 45px;
+    background: linear-gradient(to top, orange, yellow, white);
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 62px;
+    box-shadow: 0 0 25px orange;
+    animation: flicker 1s infinite alternate;
+}
+
+/* Flame animation */
+@keyframes flicker {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* Fireworks */
+.firework {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* First firework */
+.firework-one {
+    top: 20%;
+    left: 20%;
+}
+
+.firework-one::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+
+    background: gold;
+
+    box-shadow:
+        0 -35px gold,
+        25px -25px orange,
+        35px 0 gold,
+        25px 25px orange,
+        0 35px gold,
+        -25px 25px orange,
+        -35px 0 gold,
+        -25px -25px orange;
+
+    animation: burst 2s infinite;
+}
+
+/* Second firework */
+.firework-two {
+    top: 35%;
+    left: 80%;
+}
+
+.firework-two::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+
+    background: cyan;
+
+    box-shadow:
+        0 -35px cyan,
+        25px -25px blue,
+        35px 0 cyan,
+        25px 25px blue,
+        0 35px cyan,
+        -25px 25px blue,
+        -35px 0 cyan,
+        -25px -25px blue;
+
+    animation: burst 2s infinite 0.5s;
+}
+
+/* Third firework */
+.firework-three {
+    top: 60%;
+    left: 50%;
+}
+
+.firework-three::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+
+    background: violet;
+
+    box-shadow:
+        0 -35px violet,
+        25px -25px pink,
+        35px 0 violet,
+        25px 25px pink,
+        0 35px violet,
+        -25px 25px pink,
+        -35px 0 violet,
+        -25px -25px pink;
+
+    animation: burst 2s infinite 1s;
+}
+
+/* Firework animation */
+@keyframes burst {
+    0% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+}
+
+/* Greeting card design */
+
+.greeting-card {
+    width: 70%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #17103b,
+        #301052
+    );
+
+    border: 2px solid gold;
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+
+    display: none;
+}
+
+/* Greeting card heading */
+
+.greeting-card h2 {
+    color: gold;
+    font-size: 22px;
+}
+
+/* Personalized greeting */
+
+#greetingMessage {
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    text-shadow: 0 0 10px gold;
+}
+
+/* Greeting style dropdown */
+
+#greetingStyle {
+    padding: 12px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 2px solid gold;
+    background: #17103b;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Name input */
+
+#userName {
+    padding: 12px;
+    width: 195px;
+    border-radius: 20px;
+    border: 2px solid gold;
+    background: #17103b;
+    color: white;
+    font-size: 15px;
+}
