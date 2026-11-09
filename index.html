@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>AI Diwali - Shravani</title>
     <link rel="stylesheet" href="style.css">
@@ -7,66 +9,133 @@
 
 <body>
 
+<!-- FLOATING LIGHTS -->
+
+<div id="floatingLights"></div>
+
+    <!-- MAIN WELCOME SECTION -->
+
     <h1>✨ Happy Diwali ✨</h1>
 
-    <h2>Welcome to AI Diwali</h2>
+    <h2>Welcome to Festive of Diwali</h2>
 
-    <p>Where Artificial Intelligence
-    meets Indian Tradition!</p>
-<div class="diya-container">
+    
 
-    <div class="flame"></div>
 
-    <div class="diya">
-        <div class="oil"></div>
+    <!-- DIYA -->
+
+    <div class="diya-container">
+
+        <div class="flame"></div>
+
+        <div class="diya">
+            <div class="oil"></div>
+        </div>
+
     </div>
 
-</div>    
-<select id="greetingStyle">
 
-    <option value="traditional">
-        Traditional
-    </option>
+    <!-- GREETING STYLE -->
 
-    <option value="modern">
-        Modern
-    </option>
+    <select id="greetingStyle">
 
-    <option value="friendly">
-        Friendly
-    </option>
+        <option value="traditional">Traditional</option>
 
-</select>
+        <option value="modern">Modern</option>
+
+        <option value="friendly">Friendly</option>
+
+    </select>
+
+
+    <!-- ENTER NAME -->
+
     <input
-    type="text"
-    id="userName"
-    placeholder="Enter your name"
->
+        type="text"
+        id="userName"
+        placeholder="Enter your name"
+    >
 
-<button onclick="generateGreeting()">
-    Generate My Greeting ✨
-</button>
+    <button onclick="generateGreeting()">
+        Generate My Greeting ✨
+    </button>
 
-<div class="greeting-card">
 
-    <h2>🪔 Your Special Diwali Wish 🪔</h2>
+    <!-- GREETING CARD -->
 
-    <h3 id="greetingMessage"></h3>
+    <div class="greeting-card">
 
-</div>
+        <h2>🪔 Your Special Diwali Wish 🪔</h2>
+
+        <h3 id="greetingMessage"></h3>
+
+        <!-- PHOTO UPLOAD -->
+
+        <h3>Add Your Favourite Photo</h3>
+
+        <input
+            type="file"
+            id="photoUpload"
+            accept="image/*"
+            onchange="previewGreetingPhoto(event)"
+        >
+
+        <img
+            id="greetingPhoto"
+            alt="Your uploaded greeting photo"
+            style="display:none; max-width:100%; max-height:250px; margin:15px auto; border-radius:12px;"
+        >
+
+    </div>
+
+
+    <!-- COPY GREETING BUTTON -->
+
+    <button onclick="copyGreeting()">
+        Copy My Greeting 💌
+    </button>
+
+
+    <!-- RANGOLI CREATOR -->
+
+    <section class="rangoli-section">
+
+        <h2>✨ Create Your Own Rangoli ✨</h2>
+
+        <p>Choose your favourite colour and create a festive design!</p>
+
+        <input type="color" id="rangoliColor" value="#ffd700">
+
+        <button onclick="createRangoli()">
+            Create Rangoli
+        </button>
+
+        <button onclick="clearRangoli()">
+            Clear
+        </button>
+
+        <div id="rangoliCanvas"></div>
+
+    </section>
+
+
+    <!-- FIREWORKS -->
+
+    <div class="firework firework-one"></div>
+
+    <div class="firework firework-two"></div>
+
+    <div class="firework firework-three"></div>
+
+
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
-<!-- Fireworks animation -->
-<div class="firework firework-one"></div>
-
-<div class="firework firework-two"></div>
-
-<div class="firework firework-three"></div>
-
-
 </body>
 </html>
-<button onclick="copyGreeting()">
-    Copy My Greeting 💌
-</button>
+<img
+    id="greetingPhoto"
+    alt="Your uploaded greeting photo"
+    style="display:none; max-width:100%; max-height:250px; margin:15px auto; border-radius:12px;"
+>

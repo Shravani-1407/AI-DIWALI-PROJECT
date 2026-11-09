@@ -1,352 +1,386 @@
 
-/* 1. Main webpage design */
-body {
-    background: linear-gradient(135deg, #080d27, #241044, #080d27);
-    color: white;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding-top: 100px;
-    min-height: 100vh;
+/* ROYAL NAVY AND GOLD DIWALI THEME */
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* 2. Main Diwali heading */
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #050b1f, #101d3d, #071126);
+    color: #fff4d6;
+    text-align: center;
+    min-height: 100vh;
+    padding: 30px 15px;
+    overflow-x: hidden;
+}
+
+/* Main heading */
+
 h1 {
     color: #ffd700;
-    font-size: 45px;
-    text-shadow: 0 0 10px gold, 0 0 25px orange;
+    font-size: 42px;
+    text-shadow: 0 0 15px #d6a800;
+    margin: 25px 0;
 }
 
-/* 3. Subheading */
 h2 {
-    color: #55dfff;
-    font-size: 28px;
+    color: #f5d98b;
+    margin: 20px;
 }
 
-/* 4. Description */
+/* Paragraphs */
+
 p {
-    color: #eeeeee;
+    color: #e8dfc5;
     font-size: 18px;
-    line-height: 1.6;
+    margin: 15px;
 }
 
-/* 5. Celebrate button */
+/* Input fields */
+
+input, select {
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    background: #142344;
+    color: white;
+    font-size: 16px;
+}
+
+/* Buttons */
+
 button {
-    background: linear-gradient(90deg, #ff9800, #ffd700);
-    color: #160d27;
+    background: linear-gradient(135deg, #d4af37, #fff0a6);
+    color: #17213c;
+    padding: 12px 22px;
     border: none;
-    padding: 15px 30px;
-    font-size: 18px;
+    border-radius: 25px;
+    font-size: 16px;
     font-weight: bold;
-    border-radius: 30px;
     cursor: pointer;
+    margin: 10px;
     transition: 0.3s;
 }
 
-/* 6. Button hover effect */
 button:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 20px gold;
+    box-shadow: 0 0 20px #ffd700;
 }
 
-/* Diya container */
+/* Greeting card */
+
+.greeting-card {
+    background: linear-gradient(145deg, #172747, #26385b);
+    border: 2px solid #d4af37;
+    border-radius: 18px;
+    padding: 30px;
+    margin: 25px auto;
+    max-width: 500px;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+}
+
+/* Diya */
+
 .diya-container {
-    margin: 60px auto;
-    width: 150px;
-    height: 150px;
-    position: relative;
-}
-
-/* Diya lamp */
-.diya {
-    width: 120px;
-    height: 55px;
-    background: linear-gradient(
-        to bottom,
-        #ffd700,
-        #ff8c00
-    );
-
-    border-radius: 10px 10px 60px 60px;
-    position: absolute;
-    bottom: 0;
-    left: 15px;
-    box-shadow: 0 0 25px orange;
-}
-
-/* Oil inside the diya */
-.oil {
-    width: 80px;
-    height: 12px;
-    background: #5c2600;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    left: 20px;
-}
-
-/* Diya flame */
-.flame {
-    width: 25px;
-    height: 45px;
-    background: linear-gradient(
-        to top,
-        orange,
-        yellow,
-        white
-    );
-
-    border-radius: 50% 50% 50% 50%;
-    position: absolute;
-    top: 25px;
-    left: 62px;
-
-    box-shadow: 0 0 25px orange;
-    animation: flicker 1s infinite alternate;
-}
-
-/* Flame animation */
-@keyframes flicker {
-    from {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-
-    to {
-        transform: scale(1.15);
-        opacity: 1;
-    }
-}
-
-/* Diya container */
-.diya-container {
-    margin: 60px auto;
-    width: 150px;
-    height: 150px;
-    position: relative;
-}
-
-/* Diya lamp */
-.diya {
-    width: 120px;
-    height: 55px;
-    background: linear-gradient(to bottom, #ffd700, #ff8c00);
-    border-radius: 10px 10px 60px 60px;
-    position: absolute;
-    bottom: 0;
-    left: 15px;
-    box-shadow: 0 0 25px orange;
-}
-
-/* Oil inside diya */
-.oil {
-    width: 80px;
-    height: 12px;
-    background: #5c2600;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    left: 20px;
-}
-
-/* Diya flame */
-.flame {
-    width: 25px;
-    height: 45px;
-    background: linear-gradient(to top, orange, yellow, white);
-    border-radius: 50%;
-    position: absolute;
-    top: 25px;
-    left: 62px;
-    box-shadow: 0 0 25px orange;
-    animation: flicker 1s infinite alternate;
-}
-
-/* Flame animation */
-@keyframes flicker {
-    from {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-
-    to {
-        transform: scale(1.15);
-        opacity: 1;
-    }
+    margin: 30px auto;
 }
 
 /* Fireworks */
+
 .firework {
-    position: fixed;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
     pointer-events: none;
-    z-index: 0;
 }
 
-/* First firework */
-.firework-one {
-    top: 20%;
-    left: 20%;
+/* Smooth appearance */
+
+button, input, select, .greeting-card {
+    transition: all 0.3s ease;
 }
 
-.firework-one::before {
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 4px;
+/* INTERACTIVE FIREWORK ANIMATION */
+
+.interactive-firework {
+    position: fixed;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
+    background: #ffd700;
 
-    background: gold;
+    pointer-events: none;
+    z-index: 9999;
 
-    box-shadow:
-        0 -35px gold,
-        25px -25px orange,
-        35px 0 gold,
-        25px 25px orange,
-        0 35px gold,
-        -25px 25px orange,
-        -35px 0 gold,
-        -25px -25px orange;
-
-    animation: burst 2s infinite;
+    animation: interactiveBurst 1s ease-out forwards;
 }
 
-/* Second firework */
-.firework-two {
-    top: 35%;
-    left: 80%;
-}
+@keyframes interactiveBurst {
 
-.firework-two::before {
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-
-    background: cyan;
-
-    box-shadow:
-        0 -35px cyan,
-        25px -25px blue,
-        35px 0 cyan,
-        25px 25px blue,
-        0 35px cyan,
-        -25px 25px blue,
-        -35px 0 cyan,
-        -25px -25px blue;
-
-    animation: burst 2s infinite 0.5s;
-}
-
-/* Third firework */
-.firework-three {
-    top: 60%;
-    left: 50%;
-}
-
-.firework-three::before {
-    content: "";
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-
-    background: violet;
-
-    box-shadow:
-        0 -35px violet,
-        25px -25px pink,
-        35px 0 violet,
-        25px 25px pink,
-        0 35px violet,
-        -25px 25px pink,
-        -35px 0 violet,
-        -25px -25px pink;
-
-    animation: burst 2s infinite 1s;
-}
-
-/* Firework animation */
-@keyframes burst {
     0% {
-        transform: scale(0.2);
-        opacity: 0;
+        transform: scale(1);
+        box-shadow: 0 0 5px gold;
+        opacity: 1;
     }
 
     50% {
-        transform: scale(1.5);
+        transform: scale(5);
+        box-shadow:
+            20px 0 gold,
+            -20px 0 orange,
+            0 20px yellow,
+            0 -20px white,
+            15px 15px orange,
+            -15px -15px gold;
         opacity: 1;
     }
 
     100% {
-        transform: scale(0.2);
+        transform: scale(8);
+        opacity: 0;
+    }
+
+}
+
+/* RANGOLI CREATOR */
+
+.rangoli-section {
+    margin: 50px auto;
+    padding: 25px;
+    max-width: 600px;
+    background: #101d3d;
+    border: 1px solid #d4af37;
+    border-radius: 20px;
+}
+
+#rangoliCanvas {
+    width: 280px;
+    height: 280px;
+    margin: 25px auto;
+    border-radius: 50%;
+    position: relative;
+    background: #081329;
+    border: 2px solid #d4af37;
+    overflow: hidden;
+}
+
+.rangoli-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 12px currentColor;
+}
+
+/* ROYAL MANDALA DESIGN */
+
+#rangoliCanvas {
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, #172747, #071126);
+    border: 3px solid #d4af37;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.35);
+    overflow: hidden;
+}
+
+/* Flower petals */
+
+.royal-petal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 2px solid #ffe6a0;
+    border-radius: 50% 50% 12% 12%;
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--angle))
+        translateY(calc(var(--radius) * -1));
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    z-index: 2;
+}
+
+/* Small golden decorative dots */
+
+.royal-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    background: #ffd700;
+    border-radius: 50%;
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--angle))
+        translateY(-135px);
+    box-shadow: 0 0 8px gold;
+    z-index: 3;
+}
+
+/* Rangoli centre */
+
+.rangoli-center {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid gold;
+    border-radius: 50%;
+    box-shadow: 0 0 18px gold;
+    z-index: 4;
+}
+
+/* FLOATING GOLDEN LIGHTS */
+
+#floatingLights {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-light {
+    position: absolute;
+    bottom: -20px;
+    width: 7px;
+    height: 7px;
+    background: #ffd700;
+    border-radius: 50%;
+    box-shadow: 0 0 12px 4px rgba(255, 215, 0, 0.5);
+    animation: floatUp 9s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.5);
         opacity: 0;
     }
 }
 
-/* Greeting card design */
+/* Keep website content above the particles */
 
-.greeting-card {
-    width: 70%;
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 25px;
-
-    background: linear-gradient(
-        135deg,
-        #17103b,
-        #301052
-    );
-
-    border: 2px solid gold;
-    border-radius: 20px;
-
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
-
-    display: none;
+body > *:not(#floatingLights) {
+    position: relative;
+    z-index: 1;
 }
 
-/* Greeting card heading */
-
-.greeting-card h2 {
-    color: gold;
-    font-size: 22px;
+#floatingLights {
+    z-index: 0;
 }
 
-/* Personalized greeting */
+/* ROYAL SIDE DECORATIONS */
 
-#greetingMessage {
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-    text-shadow: 0 0 10px gold;
+/* VIBRANT REALISTIC DIWALI SIDE LIGHTING */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 190px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.9;
+    filter: blur(3px);
+    animation: sideGlow 4s ease-in-out infinite alternate;
 }
 
-/* Greeting style dropdown */
+/* LEFT SIDE LIGHTING */
 
-#greetingStyle {
-    padding: 12px;
-    width: 220px;
-    margin: 10px;
-    border-radius: 20px;
-    border: 2px solid gold;
-    background: #17103b;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
+body::before {
+    left: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 10% 18%,
+            rgba(255, 220, 100, 0.65),
+            transparent 38%
+        ),
+        radial-gradient(
+            ellipse at 15% 48%,
+            rgba(255, 130, 30, 0.5),
+            transparent 42%
+        ),
+        radial-gradient(
+            ellipse at 5% 80%,
+            rgba(255, 190, 50, 0.55),
+            transparent 38%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 145, 25, 0.18),
+            transparent
+        );
 }
 
-/* Name input */
+/* RIGHT SIDE LIGHTING */
 
-#userName {
-    padding: 12px;
-    width: 195px;
-    border-radius: 20px;
-    border: 2px solid gold;
-    background: #17103b;
-    color: white;
-    font-size: 15px;
+body::after {
+    right: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 90% 18%,
+            rgba(255, 220, 100, 0.65),
+            transparent 38%
+        ),
+        radial-gradient(
+            ellipse at 85% 48%,
+            rgba(255, 130, 30, 0.5),
+            transparent 42%
+        ),
+        radial-gradient(
+            ellipse at 95% 80%,
+            rgba(255, 190, 50, 0.55),
+            transparent 38%
+        ),
+        linear-gradient(
+            270deg,
+            rgba(255, 145, 25, 0.18),
+            transparent
+        );
 }
+
+/* GLOWING LIGHT MOVEMENT */
+
+@keyframes sideGlow {
+    0% {
+        opacity: 0.55;
+        filter: blur(5px);
+    }
+
+    50% {
+        opacity: 1;
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 0.75;
+        filter: blur(4px);
+    }
+}
+
+/* MOBILE ADJUSTMENT */
+
+@media (max-width: 600px) {
+    body::before,
+    body::after {
+        width: 65px;
+        opacity: 0.55;
+    }
+}
+
